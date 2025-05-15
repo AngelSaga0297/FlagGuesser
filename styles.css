@@ -1,0 +1,173 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Myriad Pro', sans-serif;
+}
+
+.container{
+    background-image: linear-gradient(to bottom, #2c4464f3, #2159a3f3, #2159a3f3);
+    height: 100dvh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    background-color: #07349475;
+}
+
+.title {
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: 700;
+    transition: all 0.2s ease;
+    color: #fff;
+}
+
+.subtitle {
+    color: #030303;
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: 700;
+    transition: all 0.2s ease;
+}   
+
+h1{
+    font-size: 4rem !important;
+    margin-bottom: 1rem;
+    text-decoration: underline;
+    text-decoration-color: #394c66f3;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: normal !important;
+    transition: all 0.2s ease;
+}
+
+.play-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    border-radius: 20px;
+    border: solid 2px #266394;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.637);
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+input {
+    border: none;
+    border-radius: 7px;
+    padding: 10px;
+    font-size: 1rem;
+    outline: #303330 solid 2px;
+    transition: all 0.2s ease;
+}
+
+input::placeholder {
+    color: #5a6e8886;
+}
+
+input:focus {
+    outline: #114d9cf3 solid 2px;
+}
+
+img{
+    border-radius: 7px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    margin-bottom: 1rem;
+    transition: all 0.2s ease;
+    width: 400px;
+    height: 250px;
+}
+
+@media only screen and (max-width: 600px) {
+    img {
+        width: 200px;
+        height: auto;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    h1 {
+        font-size: 2rem !important;
+    }
+}
+
+.guess-button {
+    margin-top: 1rem;
+    background-color: rgb(92, 128, 92);
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 7px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    width: 10rem;
+    height: 3rem;
+    font-size: x-large;
+}
+
+.guess-button:hover {
+    background-color: rgb(76, 104, 76);
+    color: rgba(255, 255, 255, 0.589);
+    transition: all 0.2s ease;
+}
+
+.guess-button:active {
+    background-color: rgb(60, 88, 60);
+    transform: scale(0.95);
+    color: rgb(255, 255, 255);
+}
+
+footer {
+    color: rgb(139, 136, 136);
+    text-align: center;
+}
+
+ /* The Modal (background) */
+ .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 7px;
+    border-color: #5ba8e7;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 20%; /* Could be more or less, depending on screen size */
+    animation-name: animatetop;
+    animation-duration: 0.6s;
+    font-size: x-large;
+    font-weight: bold;
+  }
+
+  /* Add Animation */
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+  }
